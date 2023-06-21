@@ -1,0 +1,17 @@
+{
+    "name": "ricardo/php",
+    "autoload": {
+        "psr-4": {
+            "Ricardo\\Php\\": "src/",
+            "app\\" : "app/"
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "José Ricardo Barreiros",
+            "email": "jrbarreiros@hotmail.com"
+        }
+    ],
+    "require": {}
+}
