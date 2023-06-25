@@ -1,0 +1,129 @@
+@import url(//fonts.googleapis.com/css?family=Roboto&display=swap);
+@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playarea{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.game{
+    background-color: #ff3111;
+    color:#FFF;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: oblique;
+    border-radius: 10px;
+
+    }
+.playform{
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playtimes{
+    float: right;
+    width: 48%;
+    height: 100%;
+}
+
+body, input, button {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: #333;
+}
+
+input[type=text] {
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin: 3px 0;
+    width: 50px;
+    height: 50px;
+    padding: 8px 5px;
+}
+
+button {
+    background-color: #ff3111;
+    color: #FFF;
+    border: 0;
+    border-radius: 10px;
+    padding: 1em 2em;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.wrapper {
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+.welcome h1,
+.welcome h2 {
+    text-align: center;
+}
+
+.welcome input {
+    width: 30%;
+    text-align: center;
+}
+
+.wrapper td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tic-tac-toe {
+    margin: 3em;
+}
+
+.tic-tac-toe td {
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+}
+
+.tic-tac-toe .vertical-border {
+    border-left-color: #eee;
+    border-right-color: #eee;
+}
+
+.tic-tac-toe .horizontal-border {
+    border-top-color: #eee;
+    border-bottom-color: #eee;
+}
+
+.tic-tac-toe .center-border {
+    border-color: #eee;
+}
+
+.welcome .player-name {
+    margin: 30px 0;
+}
+
+.players{
+    text-align: left;
+}
+
+.reset-btn {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: red;
+}
