@@ -1,37 +1,41 @@
 <?php
-/**
- * Calculadora:
- * instruções: Receberá os números e a operação selecionada no form (webCalculator.html)
- * Fará a verificação de qual operação foi solicitada e chama a função correta.
- */
-// Input ( os dados ficarão em um array)
 
-// Receive from html form
+require_once "classes/calcClass.php";
 
-require_once 'webcalc.php';
+$n1 = $_POST['n1'];
+$n2 = $_POST['n2'];
+$opcao = $_POST['opcao'];
 
-$numb1 = $_POST["numb1"];
-$numb2 = $_POST["numb2"];
-$opcao = $_POST["opcao"];
 
+$calcClass = new CalcClass();
+
+$calcClass->setn1($n1);
+$calcClass->setn2($n2);
 switch($opcao) {
-    case 'somarS': $result = $numb1 + $numb2;
+    case "somar":
+        $calcClass->somar();
 
         break;
-    case 'subtrair': $result = $numb1 - $numb2;
+    case "subtrair":
+        $calcClass->subtrair();
 
         break;
-    case 'dividir': $result = $numb1 / $numb2;
+    case "dividir":
+        $calcClass->dividir();
 
         break;
-    case 'multiplicar': $result = $numb1 * $numb2;
+    case "multiplicar":
+        $calcClass->multiplicar();
+
+        break;
+    default:
+        $error = TRIM("Operação inválida - Escolha uma das opções de cálculo ");
 
         break;
 }
-
-echo $result;
-
-// $calculate = new calculadora();
-// echo "Entre com os números e a operação desejada no final" . PHP_EOL;
-// $ar1 = explode(' ', readline());
-// $calculate->calc($ar1);
+if ($error) {
+    $result = $error;
+} else {
+    $result = $calcClass->getTotal();
+}
+header("Location:index.php?total=" . TRIM($result) . '&n1=' . TRIM($n1) . '&n2=' . TRIM($n2) . '&opcao=' . TRIM($opcao));
