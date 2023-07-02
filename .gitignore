@@ -4,8 +4,14 @@ materiaisestudos
 /aula001/
 /aula002/
 /aula003/
+/aula004/
+/aula005/
+
 
 /tic-tac-toe/
 .vscode
 
-/vendor/
+aula007/buscador-criticas/vendor
+.env
+dbcriticas.sqlite
+buscador.log
